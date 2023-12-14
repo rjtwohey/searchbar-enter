@@ -1,0 +1,7 @@
+{
+  "name": "searchbar-enter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
