@@ -13,8 +13,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- <form [formGroup]="searchForm" action="#"> -->
+    <ion-searchbar show-clear-button="always" mode="ios" formControlName="search" class="ion-searchbar" clear-icon="close-circle"
+    search-icon="search" placeholder="Search" autofocus="true" (keyup.enter)="searchKeyword()"></ion-searchbar>
+    <input autocapitalize="none" type="text" placeholder="Search (no cap).." (keydown.enter)="searchKeyword()">
+    <input type="text" placeholder="Search (cap).." (keydown.enter)="searchKeyword()">
+
+  <!-- </form> -->
 </ion-content>

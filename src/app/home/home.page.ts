@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  searchForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder,) {}
+  ngOnInit(): void {
+    this.searchForm = this.formBuilder.group({
+      search: ['']
+    });
+  }
+
+  searchKeyword() {
+    console.log('Enter key clicked');
+  }
+
+  
 
 }
